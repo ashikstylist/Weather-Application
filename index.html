@@ -47,8 +47,10 @@
 
       var display = $("#output")
       $.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=96ed8ad08c63e175db9c8a55b3a0d77a" ,function(result){
-        display.empty();
-
+                display.empty();
+                display.append("<h5 style='text-align:center;margin-top:15px;'>Latitude <i class='fas fa-caret-right'></i> <b>"+result.coord.lat+"</b></h5>");
+                display.append("<h5 style='text-align:center'>Longitude <i class='fas fa-caret-right'></i> <b>"+result.coord.lon+"</b></h5>");
+                display.append("<h5 style='text-align:center'>Temperature <i class='fas fa-caret-right'></i> <b>"+result.main.temp+"</b></h5>");
             }); 
        });
 
