@@ -48,6 +48,24 @@
       var display = $("#output")
       $.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=96ed8ad08c63e175db9c8a55b3a0d77a" ,function(result){
                 display.empty();
+
+              weather = result["weather"][0]["main"];
+              
+              if(weather  == "Mist" ){
+                display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/wind.png'>");
+              }
+              else if(weather  == "Clouds" ){
+                display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/clouds.png'>");
+              }
+              else if(weather  == "Rain" ){
+                display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/rain.png'>");
+              }
+              else if(weather  == "Drizzle" ){
+                display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/drizzle.png'>");
+              }
+              else if(weather  == "Clear" ){
+                display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/clear.png'>");
+              }
                 display.append("<h5 style='text-align:center;margin-top:15px;'>Latitude <i class='fas fa-caret-right'></i> <b>"+result.coord.lat+"</b></h5>");
                 display.append("<h5 style='text-align:center'>Longitude <i class='fas fa-caret-right'></i> <b>"+result.coord.lon+"</b></h5>");
                 display.append("<h5 style='text-align:center'>Temperature <i class='fas fa-caret-right'></i> <b>"+result.main.temp+"</b></h5>");
