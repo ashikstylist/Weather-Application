@@ -56,7 +56,7 @@
           var display = $("#output")
           $.getJSON("https://api.openweathermap.org/data/2.5/weather?q="+city+"&APPID=96ed8ad08c63e175db9c8a55b3a0d77a" ,function(result){
                     display.empty();
-
+                  display.append("<span style='text-align:center;font-size:18px;letter-spacing:1px;background: linear-gradient(to right, #41295a, #2f0743);color:white;padding:10px;width:100%;border-radius:20px;'>"+result["weather"][0]["main"]+"</span><br>");
                   weather = result["weather"][0]["main"];
                   
                   if(weather  == "Mist"  || weather  == "Haze" || weather  == "Fog"  ){
