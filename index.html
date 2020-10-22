@@ -60,19 +60,19 @@
                   weather = result["weather"][0]["main"];
                   
                   if(weather  == "Mist"  || weather  == "Haze" || weather  == "Fog"  ){
-                    display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/wind.png'>");
+                    display.append("<img style='margin-top:20px;  src='img/wind.png'>");
                   }
                   else if(weather  == "Clouds" ){
-                    display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/clouds.png'>");
+                    display.append("<img style='margin-top:20px;  src='img/clouds.png'>");
                   }
                   else if(weather  == "Rain" ){
-                    display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/rain.png'>");
+                    display.append("<img style='margin-top:20px;  src='img/rain.png'>");
                   }
                   else if(weather  == "Drizzle" ){
-                    display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/drizzle.png'>");
+                    display.append("<img style='margin-top:20px;  src='img/drizzle.png'>");
                   }
                   else if(weather  == "Clear" ){
-                    display.append("<img style='margin-top:20px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);border-radius:100%;' src='img/clear.png'>");
+                    display.append("<img style='margin-top:20px;  src='img/clear.png'>");
                   }
                     display.append("<h5 style='text-align:center;margin-top:15px;'>Latitude <b>"+result.coord.lat+"</b></h5>");
                     display.append("<h5 style='text-align:center'>Longitude  <b>"+result.coord.lon+"</b></h5>");
